@@ -1,0 +1,23 @@
+pipeline{
+    agent any
+    tools {
+        terraform 'terraform'
+    }
+    stages{
+        stage('check out'){
+            steps {
+                git branch: 'main', url: 'https://github.com/dk975024/ias.git'
+            }
+        }
+        stage('terraform  init'){
+            steps {
+                sh 'terraform init'
+            }
+        }
+        stage('terraform plan'){
+            steps {
+                sh 'terraform apply --auto-approve'
+            }
+        }
+    }
+}

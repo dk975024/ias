@@ -1,0 +1,24 @@
+       yum install java
+    4  yum update -y
+    5  yum install jenkins
+    6  wget -O /etc/yum.repos.d/jenkins.repo     https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    7  yum install wget
+    8  wget -O /etc/yum.repos.d/jenkins.repo     https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    9  rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+   10  yum upgrade
+   11  yum install java-11-openjdk
+   12  yum install jenkins
+   13  systemctl start jenkins
+   14  systemctl status jenkins
+       yum install groovy
+   15  cat /var/lib/jenkins/secrets/initialAdminPassword
+   16  yum install terraform
+   17  which terraform
+   20  sudo yum install -y yum-utils
+   21  sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+   22  sudo yum -y install terraform
+
+need to run above command .
+step1: after that we can create provider.tf in github 
+step2: jenkins pipline script in jenins demo file attached.
+step3: we can set gethub weeb hook in github , just enable web trigger in jenkins and set jenkins url in github.
